@@ -1,0 +1,27 @@
+{
+  "name": "content-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiel1dm/content-management-system.git"
+  },
+  "author": "Dan S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiel1dm/content-management-system/issues"
+  },
+  "homepage": "https://github.com/shiel1dm/content-management-system#readme"
+}
