@@ -9,7 +9,7 @@ To start install dependencies, and use either `node index.js` or `npm start`
 ### Walkthrough Video
 
 
-##### Roadmap
+### Roadmap
 Future updates for this app:
 - Add the ability to delete information from the DB
 - Add budgeting capablities, salary totaling, spending limits, etc.
