@@ -49,7 +49,7 @@ function EmpTable(){
 
 async function RolTable(){
   db.query('SELECT Role_id, Role_title, salary, department.Dep_name FROM test INNER JOIN department ON test.department_id = department.Dep_id', function(err, result){//This db query runs correctly in MySQL workbench, but for some reason gives me incorrect id #s in this call
-    console.log(result) 
+    
     console.table('Roles', result)
     confirm()
   })  
@@ -79,7 +79,7 @@ async function AddDep(){
     if (err){
       console.log(err);
     }
-    console.log(result)
+    
     confirm()
   })
 }
@@ -112,9 +112,7 @@ async function AddRole(){
     if (err){
       console.log(err);
     }
-    console.log(result)
-                        
-    
+      
     confirm()
   })
 }
@@ -175,9 +173,9 @@ async function UpRole(){
 
   id = init.EmpID;
   role = init.RoleID;
-  db.query('UPDATE employee SET role_id = (?) WHERE id = (?)',[id,role], (res,err) => {
+  db.query('UPDATE employee SET role_id = (?) WHERE Emp_id = (?)',[role ,id], (err, res) => {
     if(err){
-      console.log(err)
+      console.log(err, 'here')
     }
     console.log(`Employee #${id} updated to role #${role}`)
   })
@@ -195,32 +193,25 @@ async function getService(){
 
   
   if(init.service[0] === 'View all departments'){
-    console.log(init.service[0], 'working')
     DepTable()
   }
   else if(init.service[0] === 'View all roles'){
-    console.log(init.service[0], 'working')
     RolTable()
   }
   else if(init.service[0] === 'View all employees'){
-    console.log(init.service[0], 'working')
     EmpTable()
   }
   else if(init.service[0] === 'Add a department'){
-    console.log(init.service[0], 'working')
     AddDep()
     
   }
   else if(init.service[0] === 'Add a role'){
-    console.log(init.service[0], 'working')
     AddRole()
   }
   else if(init.service[0] === 'Add an employee'){
-    console.log(init.service[0], 'working')
     AddEmp()
   }
   else if(init.service[0] === 'Update an employee role'){
-    console.log(init.service[0], 'working')
     UpRole()
   }
   else{

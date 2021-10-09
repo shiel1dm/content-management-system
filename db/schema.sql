@@ -10,8 +10,8 @@ CREATE TABLE department(
 );
 
 
-DROP TABLE IF EXISTS test;
-CREATE TABLE test(
+DROP TABLE IF EXISTS position;
+CREATE TABLE position(
   Role_id INT AUTO_INCREMENT PRIMARY KEY,
   Role_title VARCHAR(30),
   salary DECIMAL,
@@ -30,7 +30,7 @@ CREATE TABLE employee(
   role_id INT,
   manager_id INT,
   FOREIGN KEY (role_id)
-  REFERENCES test(Role_id)
+  REFERENCES position(Role_id)
   
      
 );

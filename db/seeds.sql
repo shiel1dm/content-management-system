@@ -3,7 +3,7 @@ VALUES  ('DepOne'),
         ('DepTwo');
         
 
-INSERT INTO test(Role_title, salary, department_id)
+INSERT INTO position(Role_title, salary, department_id)
 VALUES  ('DEP1Manager', 200000, 1),
         ('Sales', 45000, 1),
         ('DEP2Manager', 200000, 2),
